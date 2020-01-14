@@ -273,6 +273,8 @@ common::ReadyEvent* RecordReadyEvent(OpKernelContext* context) {
 
 } // namespace
 
+//Huaxin: (client side) Allreduce operation, just call "EnqueueTensorAllreduce" to put
+//                      "Request/TensorTableEntry" pair into queue for background thread to process
 class HorovodAllreduceOp : public AsyncOpKernel {
 public:
   explicit HorovodAllreduceOp(OpKernelConstruction* context)

@@ -206,6 +206,7 @@ OperationManager* CreateOperationManager(HorovodGlobalState& state) {
                               allgather_ops, broadcast_ops, error_op);
 }
 
+// Huaxin: Background thread (server side) used to propress "reduction/gather/broadcast"
 // Process a Response by doing a reduction, a gather, a broadcast, or
 // raising an error.
 void PerformOperation(Response response) {
